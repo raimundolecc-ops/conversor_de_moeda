@@ -1,49 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>💱Conversor & Transferência</title>
-<link rel="stylesheet" href="estilos.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💱 Conversor & Transferência</title>
+    <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
+    <header class="topo">
+        <div class="topo-conteudo">
+            <div>
+                <h1>💱 Conversor e Transferência</h1>
+                <p>Converta moedas, faça transferências de saldo e veja como o site funciona.</p>
+            </div>
+            <nav>
+                <a href="#conversor">Conversor</a>
+                <a href="#conta">Conta</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+        </div>
+    </header>
 
-<div class="container">
-    <h2>💱 Conversor de Moedas</h2>
-    <label>Valor</label>
-    <input type="number" id="valor" placeholder="Digite o valor">
+    <main class="main-conteudo">
+        <section id="conversor" class="card">
+            <h2>💱 Conversor de Moedas</h2>
+            <p>Escolha a moeda de origem e destino. O site busca o valor em tempo real e mostra a conversão imediata.</p>
 
-    <label>De</label>
-    <select id="moedaDe">
-        <option value="BRL">Real (BRL)</option>
-        <option value="USD">Dólar (USD)</option>
-        <option value="EUR">Euro (EUR)</option>
-    </select>
+            <label for="valor">Valor</label>
+            <input type="number" id="valor" placeholder="Digite o valor" />
 
-    <label>Para</label>
-    <select id="moedaPara">
-        <option value="USD">Dólar (USD)</option>
-        <option value="BRL">Real (BRL)</option>
-        <option value="EUR">Euro (EUR)</option>
-    </select>
+            <label for="moedaDe">De</label>
+            <select id="moedaDe">
+                <option value="BRL">Real (BRL)</option>
+                <option value="USD">Dólar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Libra Esterlina (GBP)</option>
+                <option value="JPY">Iene Japonês (JPY)</option>
+                <option value="ARS">Peso Argentino (ARS)</option>
+                <option value="CAD">Dólar Canadense (CAD)</option>
+                <option value="AUD">Dólar Australiano (AUD)</option>
+                <option value="MXN">Peso Mexicano (MXN)</option>
+            </select>
 
-    <button onclick="converter()">Converter</button>
-    <div id="resultado" class="resultado"></div>
-</div>
+            <label for="moedaPara">Para</label>
+            <select id="moedaPara">
+                <option value="USD">Dólar (USD)</option>
+                <option value="BRL">Real (BRL)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Libra Esterlina (GBP)</option>
+                <option value="JPY">Iene Japonês (JPY)</option>
+                <option value="ARS">Peso Argentino (ARS)</option>
+                <option value="CAD">Dólar Canadense (CAD)</option>
+                <option value="AUD">Dólar Australiano (AUD)</option>
+                <option value="MXN">Peso Mexicano (MXN)</option>
+            </select>
 
-<div class="container" style="margin-top:20px;">
-    <h2>💸 Transferência de Saldo</h2>
-    <label>Conta de destino</label>
-    <input type="text" id="contaDestino" placeholder="Ex: 12345-6">
+            <button onclick="converter()">Converter</button>
+            <div id="resultado" class="resultado"></div>
+        </section>
 
-    <label>Valor a transferir</label>
-    <input type="number" id="valorTransferencia" placeholder="Digite o valor">
+        <section id="conta" class="card">
+            <h2> Transferência de Saldo</h2>
+            <p>Simule uma transferência entre contas. Preencha os dados e veja a confirmação.</p>
 
-    <button onclick="transferir()">Transferir</button>
-    <div id="mensagemTransferencia" class="resultado"></div>
-</div>
+            <label for="contaDestino">Conta de destino</label>
+            <input type="text" id="contaDestino" placeholder="Ex: 12345-6" />
 
- <script src="logicas.js"></script>
+            <label for="valorTransferencia">Valor a transferir</label>
+            <input type="number" id="valorTransferencia" placeholder="Digite o valor" />
 
+            <button onclick="transferir()">Transferir</button>
+            <div id="mensagemTransferencia" class="resultado"></div>
+        </section>
+
+        <section id="sobre" class="card">
+            <h2> Sobre o Site</h2>
+            <p>Este site foi feito para ajudar você a converter valores entre diferentes moedas e entender quanto cada valor vale antes de enviar dinheiro.</p>
+            <p>O conversor usa uma API de câmbio para buscar taxas atualizadas. A transferência é uma simulação que mostra quando os dados estão corretos e o valor pode ser enviado.</p>
+            <p>Use o conversor para verificar trocas entre Real, Dólar, Euro, Libra, Iene, Peso Argentino, Dólar Canadense, Dólar Australiano e Peso Mexicano.</p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <a href="https://wa.me/5563984077359?text=Ol%C3%A1%20venho%20do%20seu%20site%2C%20gostaria%20de%20saber%20mais." target="_blank">Contato (63)98407-7359</a>
+        <p>Todos os direitos reservados © 2026 - Desenvolvido por Raimundo.</p>
+        
+    </footer>
+
+    <script src="logica.js"></script>
 </body>
 </html>

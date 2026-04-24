@@ -1,38 +1,141 @@
- body {
-        font-family: Arial, sans-serif;
-        background: #f4f6f8;
-        margin: 0;
-        padding: 20px;
-    }
-    .container {
-        max-width: 500px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h2 { text-align: center; color: #333; }
-    label { font-weight: bold; display: block; margin-top: 10px; }
-    input, select, button {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    button {
-        background: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-    button:hover { background: #45a049; }
-    .resultado {
-        margin-top: 15px;
-        padding: 10px;
-        background: #e8f5e9;
-        border-radius: 5px;
-        color: #2e7d32;
-        font-weight: bold;
-    }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef4fb;
+  color: #172a46;
+}
+
+.topo {
+  background: linear-gradient(135deg, #0b3e6b 0%, #1963a3 100%);
+  color: #fff;
+  padding: 22px 18px;
+}
+
+.topo-conteudo {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.topo h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.topo p {
+  margin: 0;
+  line-height: 1.5;
+  max-width: 460px;
+}
+
+nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #dbe8ff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.main-conteudo {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 26px 18px 40px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 37, 74, 0.08);
+  padding: 26px;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  line-height: 1.7;
+  color: #3f4b61;
+}
+
+label {
+  display: block;
+  margin-top: 18px;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d7e2ed;
+  border-radius: 12px;
+  margin-top: 8px;
+  font-size: 1rem;
+  background: #f7fbff;
+}
+
+button {
+  margin-top: 22px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #0b3e6b;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+button:hover {
+  background: #0a365f;
+}
+
+.resultado {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #eef5ff;
+  color: #0d2a52;
+  min-height: 48px;
+}
+
+.rodape {
+  text-align: center;
+  padding: 20px 18px;
+  color: #5b6b83;
+  font-size: 0.95rem;
+  background: #ffffff;
+  border-top: 1px solid #e1e8f3;
+}
+
+@media (max-width: 720px) {
+  .topo-conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+  }
+}
